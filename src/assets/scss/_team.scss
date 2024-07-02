@@ -1,0 +1,247 @@
+@import './colors';
+@import './mixins/display';
+@import './variables';
+.team-main-area {
+  width: 100%;
+  height: auto;
+  z-index: 9999;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: $white;
+  .header {
+    color: lighten($dark, 20%);
+    width: 100%;
+    @include display(column);
+    justify-content: center;
+    h1 {
+      text-transform: uppercase;
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 0.1;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      font-size: 16px;
+    }
+    @include mediaqueries($mobile) {
+      h1 {
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 0.1;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+      h3 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+        font-size: 16px;
+      }
+    }
+  }
+  .team-members-container {
+    @include display(column);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+    .team-members-grid {
+      width: 85%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 40px;
+      .team-item-area {
+        cursor: default;
+        overflow: hidden;
+        height: 300px;
+        width: 100%;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          transition: $transition;
+          object-fit: cover;
+        }
+        .team-item-ovelay {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          transition: $transition;
+          transition-duration: 1s;
+          opacity: 0;
+          @include display(column);
+          justify-content: center;
+          left: 0;
+          color: $white;
+          background-color: rgba(0, 0, 0, 0.845);
+
+          h3 {
+            margin-bottom: 1px;
+            transform: translateY(-40px);
+            transition: $transition;
+            text-align: center;
+          }
+          h4 {
+            margin: 4px 0;
+            font-weight: 400;
+            transition: $transition;
+            transition-delay: 0.1s;
+            transform: translateY(-40px);
+            text-align: center;
+          }
+          .team-member-links {
+            margin-top: 8px;
+            a {
+              color: $white;
+              margin: 0 8px;
+
+              &:hover {
+                color: $primary;
+              }
+              .team-member-link-icon {
+                transition: $transition;
+                transform: translateY(40px);
+              }
+            }
+          }
+          .team-member-links a:nth-child(2) {
+            .team-member-link-icon {
+              transition-delay: 0.1s;
+            }
+          }
+          .team-member-links a:nth-child(3) {
+            .team-member-link-icon {
+              transition-delay: 0.2s;
+            }
+          }
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
+          h3 {
+            transform: translateY(0);
+          }
+          h4 {
+            transform: translateY(0);
+            transition-delay: 0.1s;
+          }
+          .team-item-ovelay {
+            opacity: 1;
+            .team-member-links {
+              a {
+                .team-member-link-icon {
+                  transform: translateY(0);
+                }
+              }
+            }
+            .team-member-links a:nth-child(2) {
+              .team-member-link-icon {
+                transition-delay: 0.1s;
+              }
+            }
+            .team-member-links a:nth-child(3) {
+              .team-member-link-icon {
+                transition-delay: 0.2s;
+              }
+            }
+          }
+        }
+      }
+      @include mediaqueries(1000px) {
+        width: 90%;
+        .team-item-area {
+          height: 280px;
+        }
+      }
+      @include mediaqueries(950px) {
+        width: 95%;
+        grid-gap: 20px;
+        .team-item-area {
+          height: 280px;
+        }
+      }
+      @include mediaqueries(850px) {
+        width: 95%;
+        grid-gap: 20px;
+        .team-item-area {
+          height: 240px;
+        }
+      }
+      @include mediaqueries($tablet) {
+        width: 90%;
+        grid-gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        .team-item-area {
+          height: 340px;
+        }
+      }
+      @include mediaqueries(560px) {
+        width: 90%;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        .team-item-area {
+          height: 300px;
+        }
+      }
+      @include mediaqueries(500px) {
+        width: 95%;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        .team-item-area {
+          height: 300px;
+        }
+      }
+      @include mediaqueries($mobile) {
+        width: 70%;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        .team-item-area {
+          height: 400px;
+        }
+      }
+      @include mediaqueries(400px) {
+        width: 75%;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        .team-item-area {
+          height: 400px;
+        }
+      }
+      @include mediaqueries(350px) {
+        width: 75%;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        .team-item-area {
+          height: 320px;
+        }
+      }
+      @include mediaqueries(300px) {
+        width: 80%;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        .team-item-area {
+          height: 320px;
+        }
+      }
+      @include mediaqueries(250px) {
+        width: 85%;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        .team-item-area {
+          height: 280px;
+        }
+      }
+    }
+  }
+}

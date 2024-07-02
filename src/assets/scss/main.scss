@@ -1,0 +1,287 @@
+@import "./colors";
+@import "./mixins/display";
+@import "./variables";
+@import "./home";
+@import "./carousel";
+@import "./about";
+@import "./galery";
+@import "./footer";
+@import "./team";
+@import "./testimonials";
+@import "./about-page";
+@import "./services";
+@import "./contact";
+@import "./mixins/mediaqueries";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@600&family=Source+Sans+Pro:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+}
+.App {
+  width: 100%;
+  overflow-x: hidden;
+}
+header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  border-bottom: 1px solid $light;
+  position: fixed;
+  transition: $transition;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  @include display($direction: row);
+  .header-logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    .logo-wrapper {
+      text-decoration: none;
+      span {
+        color: $white;
+      }
+    }
+    @include mediaqueries($tablet) {
+      padding-left: 30px;
+    }
+    .hamburger-container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      display: none;
+      padding-right: 50px;
+      .container {
+        cursor: pointer;
+        .burger {
+          width: 30px;
+          height: 3px;
+          background-color: $white;
+          position: relative;
+          margin: 5px 0;
+          color: $white;
+          transition: $transition;
+          transition-duration: 1s;
+        }
+      }
+
+      @include mediaqueries($tablet) {
+        padding-right: 30px;
+        display: flex;
+        .container {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .header-links-container {
+    padding-right: 50px;
+    height: 100%;
+    @include display($direction: row);
+    ul {
+      height: 100%;
+      @include display($direction: row);
+      li {
+        height: 100%;
+        list-style: none;
+        padding: 0 20px;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          left: 0;
+          right: 0;
+          border-bottom: 1px solid $white;
+          bottom: 0;
+          transform: scale(0);
+          transform-origin: left;
+          transition: $transition;
+        }
+        &:hover::before {
+          transform: scale(1);
+        }
+        @include display($direction: row);
+        a {
+          color: $white;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 14px;
+        }
+      }
+    }
+
+    @include mediaqueries($tablet) {
+      display: none;
+    }
+  }
+}
+.header-container-area.scrolling {
+  height: 60px;
+  background-color: $white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.514);
+  .header-logo-container {
+    .logo-wrapper {
+      span {
+        color: $dark;
+      }
+    }
+    .burger {
+      color: #000;
+    }
+  }
+  @include mediaqueries($tablet) {
+    .hamburger-container {
+      .container {
+        .burger {
+          background-color: $dark;
+        }
+      }
+    }
+  }
+  .header-links-container {
+    a {
+      color: $dark;
+    }
+  }
+}
+@include mediaqueries($tablet) {
+  .header-container-area.open {
+    background-color: $white;
+    height: auto;
+    flex-direction: column;
+    .header-logo-container {
+      border-bottom: 1px solid #f2f2f2f2;
+      height: 80px;
+      .logo-wrapper {
+        padding-left: 20px;
+
+        span {
+          color: lighten($dark, 20%);
+        }
+      }
+      .hamburger-container {
+        padding-right: 40px;
+        .container {
+          .burger {
+            transform: rotate(750deg);
+            background-color: lighten($dark, 20%);
+          }
+          .burger:nth-child(2) {
+            transform: translateX(100vw);
+          }
+          .burger:nth-child(1) {
+            transform: translateY(8px) rotate(-760deg);
+          }
+          .burger:nth-child(3) {
+            transform: translateY(-8px) rotate(760deg);
+          }
+        }
+      }
+    }
+    .header-links-container {
+      display: flex;
+      width: 100%;
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+        li {
+          margin: 10px 0;
+          a {
+            color: lighten($dark, 20%);
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  .header-container-area.scrolling.open {
+    .header-logo-container {
+      height: 60px;
+    }
+  }
+}
+@include mediaqueries($mobile) {
+}
+.Toastify {
+  z-index: 9999999999999;
+}
+.Toastify__toast {
+  z-index: 9999999999999;
+}
+.Toastify__toast--error {
+  z-index: 9999999999999;
+}
+.Toastify__toast--success {
+  z-index: 9999999999999;
+}
+.Toastify__toast-container.Toastify__toast-container--top-right {
+  z-index: 9999999999999;
+}
+// loading spinner sytyles
+
+.loadin-main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #5b86e5;
+  animation: animateTextLoading 5s infinite;
+  flex-direction: column;
+  h3 {
+    color: #fff;
+    font-size: 250px;
+    opacity: 0.3;
+    margin-bottom: -10px;
+    @include mediaqueries(900px) {
+      font-size: 200px;
+    }
+    @include mediaqueries($tablet) {
+      font-size: 150px;
+    }
+    @include mediaqueries($mobile) {
+      font-size: 90px;
+    }
+  }
+  h5 {
+    font-size: 70px;
+    color: $white;
+    opacity: 0.2;
+    margin: 0;
+    @include mediaqueries(900px) {
+      font-size: 70px;
+    }
+    @include mediaqueries($tablet) {
+      font-size: 60px;
+    }
+    @include mediaqueries($mobile) {
+      font-size: 30px;
+    }
+  }
+}
+
+@keyframes animateTextLoading {
+  0% {
+    background-color: #36d1dc;
+  }
+
+  50% {
+    background: #cc2b5e;
+  }
+  100% {
+    background-color: #36d1dc;
+  }
+}
