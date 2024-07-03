@@ -85,7 +85,7 @@ class Footer extends Component {
                       >
                         <IoMdPhonePortrait />
                       </IconContext.Provider>{" "}
-                      (+555) 555 555 555
+                      (519) 639 3332
                     </a>
                   </li>
                   <li>

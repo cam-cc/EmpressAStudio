@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { IconContext } from "react-icons/";
 import image2 from "../assets/img/lollipop-room.jpeg";
-import image3 from "../assets/img/4.jpeg";
-import image1 from "../assets/img/5.jpeg";
+import image3 from "../assets/img/bd-1.jpeg";
+import image1 from "../assets/img/bd-2.jpeg";
 import Slide from "./slide";
 
 const carouselSlides = [

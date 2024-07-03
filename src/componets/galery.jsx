@@ -62,7 +62,7 @@ class Galery extends Component {
   render() {
     const links = [
       { id: 1, name: "all" },
-      { id: 2, name: "Photographie" },
+      { id: 2, name: "Photography" },
       { id: 3, name: "Print" },
       { id: 4, name: "Design" },
     ];
@@ -89,7 +89,7 @@ class Galery extends Component {
             {this.state.selectedLink === "all" && (
               <AllImages onShowCarousel={this.handleShowCarousel} />
             )}
-            {this.state.selectedLink === "Photographie" && (
+            {this.state.selectedLink === "Photography" && (
               <Photographie onShowCarousel={this.handleShowCarousel} />
             )}
             {this.state.selectedLink === "Print" && (

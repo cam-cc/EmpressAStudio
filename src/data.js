@@ -1,17 +1,12 @@
-import image from "./assets/img/angela.jpg";
-import image2 from "./assets/img/angela.jpg";
-import image3 from "./assets/img/angela.jpg";
-import image4 from "./assets/img/angela.jpg";
-import image5 from "./assets/img/angela.jpg";
-// import image6 from "./assets/img/10.jpg";
-import image7 from "./assets/img/angela.jpg";
-import image8 from "./assets/img/angela.jpg";
-import image9 from "./assets/img/angela.jpg";
-import image10 from "./assets/img/angela.jpg";
-import image11 from "./assets/img/angela.jpg";
-import image12 from "./assets/img/angela.jpg";
-import image13 from "./assets/img/angela.jpg";
-import image61 from "./assets/img/lollipop-room.jpeg";
+import image from "./assets/img/bd-1.jpeg";
+import image2 from "./assets/img/bd-2.jpeg";
+import image3 from "./assets/img/bd-3.jpeg";
+import image4 from "./assets/img/bd-4.jpeg";
+import image5 from "./assets/img/bd-5.jpeg";
+import image7 from "./assets/img/bd-7.jpeg";
+import image8 from "./assets/img/bd-8.jpeg";
+import image9 from "./assets/img/bd-6.jpeg";
+import image10 from "./assets/img/bd-9.jpeg";
 
 export const allImages = [
   {
@@ -47,7 +42,7 @@ export const allImages = [
   {
     _id: 6,
     categoryId: 2,
-    url: image61,
+    url: image10,
     animation: "zoom-in-up",
   },
   {
@@ -67,29 +62,5 @@ export const allImages = [
     categoryId: 3,
     url: image9,
     animation: "flip-right",
-  },
-  {
-    _id: 10,
-    categoryId: 3,
-    url: image10,
-    animation: "flip-right",
-  },
-  {
-    _id: 11,
-    categoryId: 3,
-    url: image11,
-    animation: "flip-right",
-  },
-  {
-    _id: 12,
-    categoryId: 3,
-    url: image12,
-    animation: "flip-right",
-  },
-  {
-    _id: 13,
-    categoryId: 1,
-    url: image13,
-    animation: "zoom-in",
   },
 ];

@@ -49,7 +49,7 @@ class ContactPage extends Component {
         },
       });
 
-      toast.success("Votre message a été envoyé avec success!");
+      toast.success("message successfully sent!");
       this.setState({ response, sending: false });
       resetForm({});
       setStatus({ success: true });
@@ -59,7 +59,7 @@ class ContactPage extends Component {
       setStatus({ success: false });
       setSubmitting(false);
       toast.error(
-        "Désolé votre message n'a pas été envoyé. veuillez vérifier connexion internet puis reéssayer!"
+        "error"
       );
     }
   };
@@ -190,7 +190,7 @@ class ContactPage extends Component {
               <h3>Address</h3>
               <p>1750 Jalna Blvd, London Ontario</p>
               <p>
-                <span>Phone:</span> (+555) 555 555 555 
+                <span>Phone:</span> (519) 639 3332
               </p>
               <p>empressastudio@gmail.com</p>
             </div>

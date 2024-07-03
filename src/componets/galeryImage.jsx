@@ -23,8 +23,8 @@ class Images extends Component {
             >
               <img src={item.url} alt="" />
               <div className="image-overlay">
-                <h3>Photography</h3>
-                <h4>Design</h4>
+                <h3>Gallery</h3>
+                <h4>Selfie Booth</h4>
                 <div className="icons" onClick={() => onShowCarousel(item)}>
                   <IconContext.Provider value={{ className: "galery-icon" }}>
                     <BiSearchAlt />

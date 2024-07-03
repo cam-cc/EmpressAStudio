@@ -30,13 +30,13 @@ class Acomplishments extends Component {
           </IconContext.Provider>
           <Spring
             from={{ number: 0 }}
-            to={{ number: 5 }}
+            to={{ number: 13 }}
             config={{ duration: 2000 }}
             delay={500}
           >
             {(props) => <h1>{Math.ceil(props.number)}</h1>}
           </Spring>
-          <span>Unique Rooms</span>
+          <span>Unique Rooms & Backdrops </span>
         </div>
         <div className="accomplishemnt-item">
           <IconContext.Provider value={{ className: "accomplishment-icon" }}>
