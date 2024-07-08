@@ -19,6 +19,10 @@ const Slide = ({ title , description }) => {
                    <p key={index}> {desc} </p>
                 ))}
             </div>
+            <div style={{fontStyle: "italic", fontSize: 12}}>
+                plus taxes
+                <br/> *Prices subject to change*
+            </div>
         </div>
     </div>
   );
