@@ -12,23 +12,21 @@ class ContactPage extends Component {
     sending: false,
   };
 
-  validationSchema = Yup.object().shape({
-    name: Yup.string()
-      .required("Veuillez entrer votre nom.")
-      .min(3, "Votre nom doit contenir au mois 3 lettres."),
-    email: Yup.string()
-      .email("Veuillez entrer une addresse mail valide!")
-      .required("Veuillez entrer votre address Email."),
-    phone: Yup.string().required("Veuillez entrer votre numéro de téléphone."),
-    subject: Yup.string()
-      .min(3, "Le suject doit avoir aumoins 3 lettres.")
-      .required(
-        "Veuillez entrer le suject sur lequel vous voulez nous écrire."
-      ),
-    message: Yup.string()
-      .min(3, "Votre message est trop court.")
-      .required("Veuillez entrer votre message."),
-  });
+ validationSchema = Yup.object().shape({
+  name: Yup.string()
+    .required("Please enter your name")
+    .min(3, "Your name must contain at least 3 letters."),
+  email: Yup.string()
+    .email("Please enter a valid email address")
+    .required("Please enter your email address."),
+  phone: Yup.string().required("Please enter your phone number."),
+  subject: Yup.string()
+    .min(3, "The subject must have at least 3 letters.")
+    .required("Please enter the subject you want to write to us about."),
+  message: Yup.string()
+    .min(3, "Your message is too short.")
+    .required("Please enter your message."),
+});
   handleSendMessage = async (
     message,
     { setSubmitting, setStatus, resetForm }
