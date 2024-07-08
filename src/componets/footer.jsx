@@ -72,7 +72,7 @@ class Footer extends Component {
                       >
                         <FaMapMarkerAlt />
                       </IconContext.Provider>{" "}
-                      1750 Jalna Blvd, London Ontario
+                      1750 Ernest ave, London Ontario
                     </a>
                   </li>
                   <li>
@@ -85,7 +85,7 @@ class Footer extends Component {
                       >
                         <IoMdPhonePortrait />
                       </IconContext.Provider>{" "}
-                      (519) 639 3332
+                      (519) 630 6779
                     </a>
                   </li>
                   <li>
@@ -119,33 +119,18 @@ class Footer extends Component {
         </div>
         <div className="footer-bottom-area">
           <div className="links-wrapper">
-            <a href="https://web.facebook.com/FMBStudio-240776083478314/?_rdc=1&_rdr">
+            <a href="https://www.facebook.com/groups/381036687776848">
               <IconContext.Provider
                 value={{ className: "footer-link-social-media-icon" }}
               >
                 <FaFacebookF />
               </IconContext.Provider>
             </a>
-            <a href="https://www.instagram.com/espoirfmb/">
+            <a href="https://www.instagram.com/empressaphoto?igsh=ZW4wYXIycWxzNzVi">
               <IconContext.Provider
                 value={{ className: "footer-link-social-media-icon" }}
               >
                 <ImInstagram />
-              </IconContext.Provider>
-            </a>
-            <a href="https://wa.me/243977962061">
-              <IconContext.Provider
-                value={{ className: "footer-link-social-media-icon" }}
-              >
-                <IoLogoWhatsapp />
-              </IconContext.Provider>
-            </a>
-
-            <a href="https://www.youtube.com/channel/UCILje3JnAGxfYvSS5Jbr7Lw">
-              <IconContext.Provider
-                value={{ className: "footer-link-social-media-icon" }}
-              >
-                <FaYoutube />
               </IconContext.Provider>
             </a>
           </div>

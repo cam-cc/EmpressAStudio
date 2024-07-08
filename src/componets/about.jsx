@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { IconContext } from "react-icons";
-import { GiAbstract062, GiArcheryTarget } from "react-icons/gi";
+import {GiAbstract062, GiArcheryTarget, GiCheckMark} from "react-icons/gi";
 import { IoTelescopeSharp } from "react-icons/io5";
 class About extends Component {
   state = {};
@@ -54,7 +54,7 @@ class About extends Component {
                   <IconContext.Provider
                     value={{ className: "about-grid-icon" }}
                   >
-                    <GiArcheryTarget />
+                    <GiCheckMark/>
                   </IconContext.Provider>
                 </div>
                 <h2 className="title">Simple</h2>

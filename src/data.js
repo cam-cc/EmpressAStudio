@@ -29,13 +29,13 @@ export const allImages = [
   },
   {
     _id: 4,
-    categoryId: 1,
+    categoryId: 2,
     url: image4,
     animation: "zoom-in",
   },
   {
     _id: 5,
-    categoryId: 2,
+    categoryId: 1,
     url: image5,
     animation: "zoom-in-up",
   },
@@ -59,7 +59,7 @@ export const allImages = [
   },
   {
     _id: 9,
-    categoryId: 3,
+    categoryId: 2,
     url: image9,
     animation: "flip-right",
   },

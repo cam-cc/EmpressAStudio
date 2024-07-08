@@ -3,15 +3,11 @@ import React, { Component } from "react";
 import CarouselModal from "./carouselModal";
 import { allImages } from "../data";
 import Images from "./galeryImage";
-import { Link } from "react-router-dom";
 const photographyImages = allImages
   .filter((image) => image.categoryId === 1)
   .slice(0, 6);
 const printImages = allImages
   .filter((image) => image.categoryId === 2)
-  .slice(0, 6);
-const designImages = allImages
-  .filter((image) => image.categoryId === 3)
   .slice(0, 6);
 const newImages = allImages.slice(0, 12);
 
@@ -36,12 +32,6 @@ class Print extends Component {
     return <Images onShowCarousel={onShowCarousel} images={printImages} />;
   }
 }
-class Design extends Component {
-  render() {
-    const { onShowCarousel } = this.props;
-    return <Images onShowCarousel={onShowCarousel} images={designImages} />;
-  }
-}
 
 class Galery extends Component {
   state = {
@@ -62,9 +52,8 @@ class Galery extends Component {
   render() {
     const links = [
       { id: 1, name: "all" },
-      { id: 2, name: "Photography" },
-      { id: 3, name: "Print" },
-      { id: 4, name: "Design" },
+      { id: 2, name: "Booths" },
+      { id: 3, name: "Backdrops" },
     ];
 
     return (
@@ -89,14 +78,11 @@ class Galery extends Component {
             {this.state.selectedLink === "all" && (
               <AllImages onShowCarousel={this.handleShowCarousel} />
             )}
-            {this.state.selectedLink === "Photography" && (
+            {this.state.selectedLink === "Booths" && (
               <Photographie onShowCarousel={this.handleShowCarousel} />
             )}
-            {this.state.selectedLink === "Print" && (
+            {this.state.selectedLink === "Backdrops" && (
               <Print onShowCarousel={this.handleShowCarousel} />
-            )}
-            {this.state.selectedLink === "Design" && (
-              <Design onShowCarousel={this.handleShowCarousel} />
             )}
           </div>
         </div>

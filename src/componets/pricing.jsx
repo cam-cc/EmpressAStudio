@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import TestimonialsCarousel from "./testimonialsCarousel";
+import PricingCarousel from "./pricingCarousel";
 
-class Testimonials extends Component {
+class Pricing extends Component {
   state = {};
   render() {
     return (
@@ -10,14 +10,14 @@ class Testimonials extends Component {
         style={{ minHeight: 800 }}
       >
         <div className="header">
-          <h1 data-aos="fade-up">Testimonials</h1>
+          <h1 data-aos="fade-up">Pricing</h1>
         </div>
         <div className="carousel-container">
-          <TestimonialsCarousel />
+          <PricingCarousel/>
         </div>
       </div>
     );
   }
 }
 
-export default Testimonials;
+export default Pricing;

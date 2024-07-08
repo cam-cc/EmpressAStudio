@@ -1,6 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@600&family=Source+Sans+Pro:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+.image-container-pricing{
+ height: 75px;
+  width: 125px;
+}
+
+/* TermsOfUse.css */
+.terms-of-use {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.terms-of-use-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.terms-of-use h1,
+.terms-of-use h2,
+.terms-of-use p,
+.terms-of-use ul {
+  margin-bottom: 20px;
+}
+
+.terms-of-use ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.terms-of-use li {
+  margin-bottom: 10px;
+}
+
 .home-main-area {
   width: 100%;
   height: 750px;

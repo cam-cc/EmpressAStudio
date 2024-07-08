@@ -4,6 +4,7 @@ import * as Yup from "yup";
 // import Map from "../map";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Termsofuse from "../termsofuse";
 
 class ContactPage extends Component {
   state = {
@@ -188,24 +189,29 @@ class ContactPage extends Component {
           <div className="contact-detail-wrapper">
             <div className="contact-item">
               <h3>Address</h3>
-              <p>1750 Jalna Blvd, London Ontario</p>
+              <p>1750 Ernest Ave, London Ontario</p>
               <p>
-                <span>Phone:</span> (519) 639 3332
+                <span>Phone:</span> (519) 630 6779
               </p>
               <p>empressastudio@gmail.com</p>
             </div>
             <div className="contact-item">
               <h3>Hours of Operation</h3>
-              <p>Monday - Friday</p>
-              <p>9am - 8pm</p>
-              <p>Saturday - Sunday</p>
-              <p>By appointment</p>
+              <p>Mondays : 4pm to 8pm</p>
+              <p>Tuesdays : 4pm to 8pm</p>
+              <p>Wednesday - Friday : 1pm to 8pm</p>
+              <p>Saturdays : 2pm to 8pm</p>
+              <p>Sundays : 12pm to 8pm</p>
+              <p>For special events please contact!</p>
             </div>
           </div>
         </div>
         {/* <div className="map-container">
           <Map />
         </div> */}
+        <div>
+          <Termsofuse/>
+        </div>
       </div>
     );
   }

@@ -3,6 +3,7 @@ import { IconContext } from "react-icons";
 import { FaCameraRetro } from "react-icons/fa";
 import {ImVideoCamera, ImPrinter, ImImages} from "react-icons/im";
 import Testimonials from "../testimonials";
+import Pricing from "../pricing";
 class ServicesPage extends Component {
   state = {};
   render() {
@@ -56,7 +57,7 @@ class ServicesPage extends Component {
             </div>
           </div>
         </div>
-        <Testimonials />
+        <Pricing/>
       </div>
     );
   }
